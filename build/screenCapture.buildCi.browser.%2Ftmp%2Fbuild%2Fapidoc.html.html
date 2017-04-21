@@ -1,0 +1,1831 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>cover (v0.2.9)</a>
+</h1>
+<h4>Native JavaScript code coverage</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover">module cover</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.cover">
+            function <span class="apidocSignatureSpan"></span>cover
+            <span class="apidocSignatureSpan">(fileRegex, ignore, debugDirectory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.cli">
+            function <span class="apidocSignatureSpan">cover.</span>cli
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.combine">
+            function <span class="apidocSignatureSpan">cover.</span>combine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.hook">
+            function <span class="apidocSignatureSpan">cover.</span>hook
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.hookAndCombine">
+            function <span class="apidocSignatureSpan">cover.</span>hookAndCombine
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.hookAndCombineAndReport">
+            function <span class="apidocSignatureSpan">cover.</span>hookAndCombineAndReport
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.hookAndReport">
+            function <span class="apidocSignatureSpan">cover.</span>hookAndReport
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.instrument">
+            function <span class="apidocSignatureSpan">cover.</span>instrument
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.load">
+            function <span class="apidocSignatureSpan">cover.</span>load
+            <span class="apidocSignatureSpan">(datas)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>commander</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>console</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>escodegen</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>esprima</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>html</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>json</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>plain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.</span>reporters</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.cli">module cover.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.cli.format">
+            function <span class="apidocSignatureSpan">cover.cli.</span>format
+            <span class="apidocSignatureSpan">(coverageData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cover.cli.</span>MAX_FILENAME_LENGTH</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.cli.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.colors">module cover.colors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.addSequencer">
+            function <span class="apidocSignatureSpan">cover.colors.</span>addSequencer
+            <span class="apidocSignatureSpan">(name, map)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.black">
+            function <span class="apidocSignatureSpan">cover.colors.</span>black
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.blue">
+            function <span class="apidocSignatureSpan">cover.colors.</span>blue
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.bold">
+            function <span class="apidocSignatureSpan">cover.colors.</span>bold
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.cyan">
+            function <span class="apidocSignatureSpan">cover.colors.</span>cyan
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.green">
+            function <span class="apidocSignatureSpan">cover.colors.</span>green
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.grey">
+            function <span class="apidocSignatureSpan">cover.colors.</span>grey
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.inverse">
+            function <span class="apidocSignatureSpan">cover.colors.</span>inverse
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.italic">
+            function <span class="apidocSignatureSpan">cover.colors.</span>italic
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.magenta">
+            function <span class="apidocSignatureSpan">cover.colors.</span>magenta
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.rainbow">
+            function <span class="apidocSignatureSpan">cover.colors.</span>rainbow
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.red">
+            function <span class="apidocSignatureSpan">cover.colors.</span>red
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.setTheme">
+            function <span class="apidocSignatureSpan">cover.colors.</span>setTheme
+            <span class="apidocSignatureSpan">(theme)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.stripColors">
+            function <span class="apidocSignatureSpan">cover.colors.</span>stripColors
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.underline">
+            function <span class="apidocSignatureSpan">cover.colors.</span>underline
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.white">
+            function <span class="apidocSignatureSpan">cover.colors.</span>white
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.yellow">
+            function <span class="apidocSignatureSpan">cover.colors.</span>yellow
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.zalgo">
+            function <span class="apidocSignatureSpan">cover.colors.</span>zalgo
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.colors.zebra">
+            function <span class="apidocSignatureSpan">cover.colors.</span>zebra
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.colors.</span>themes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.colors.</span>mode</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.commander">module cover.commander</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.commander.Command">
+            function <span class="apidocSignatureSpan">cover.commander.</span>Command
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.commander.Option">
+            function <span class="apidocSignatureSpan">cover.commander.</span>Option
+            <span class="apidocSignatureSpan">(flags, description)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.commander.</span>args</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.commander.</span>commands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.commander.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.commander.</span>opts</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.console">module cover.console</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.console.patch">
+            function <span class="apidocSignatureSpan">cover.console.</span>patch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.console.unpatch">
+            function <span class="apidocSignatureSpan">cover.console.</span>unpatch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.escodegen">module cover.escodegen</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.escodegen.generate">
+            function <span class="apidocSignatureSpan">cover.escodegen.</span>generate
+            <span class="apidocSignatureSpan">(node, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.escodegen.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.esprima">module cover.esprima</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.esprima.parse">
+            function <span class="apidocSignatureSpan">cover.esprima.</span>parse
+            <span class="apidocSignatureSpan">(code, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cover.esprima.</span>Syntax</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.esprima.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.html">module cover.html</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.html.format">
+            function <span class="apidocSignatureSpan">cover.html.</span>format
+            <span class="apidocSignatureSpan">(coverageData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.html.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.instrument">module cover.instrument</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.instrument.instrument">
+            function <span class="apidocSignatureSpan">cover.</span>instrument
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.instrument.Instrumentor">
+            function <span class="apidocSignatureSpan">cover.instrument.</span>Instrumentor
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.json">module cover.json</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.json.format">
+            function <span class="apidocSignatureSpan">cover.json.</span>format
+            <span class="apidocSignatureSpan">(coverageData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.json.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cover.plain">module cover.plain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cover.plain.format">
+            function <span class="apidocSignatureSpan">cover.plain.</span>format
+            <span class="apidocSignatureSpan">(coverageData)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cover.plain.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover" id="apidoc.module.cover">module cover</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.cover" id="apidoc.element.cover.cover">
+        function <span class="apidocSignatureSpan"></span>cover
+        <span class="apidocSignatureSpan">(fileRegex, ignore, debugDirectory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cover = function (fileRegex, ignore, debugDirectory) {
+    var originalRequire = require.extensions['.js'];
+    var coverageData = {};
+    var match = null;
+
+    ignore = ignore || {};
+
+    if (fileRegex instanceof RegExp) {
+        match = regex;
+    }
+    else {
+        match = new RegExp(fileRegex ? (fileRegex.replace(/\//g, '\\/').replace(/\./g, '\\.')) : ".*", '');
+    }
+
+    var pathToCoverageStore = path.resolve(path.resolve(__dirname), "coverage_store.js").replace(/\\/g, "/");
+    var templatePath = path.resolve(path.resolve(__dirname), "templates", "instrumentation_header.js");
+    var template = fs.readFileSync(templatePath, 'utf-8');
+
+    require.extensions['.js'] = function(module, filename) {
+
+        filename = filename.replace(/\\/g, "/");
+
+        if(!match.test(filename)) return originalRequire(module, filename);
+        if(filename === pathToCoverageStore) return originalRequire(module, filename);
+
+        // If the specific file is to be ignored
+        var full = path.resolve(filename);
+        if(ignore[full]) {
+          return originalRequire(module, filename);
+        }
+
+        // If any of the parents of the file are to be ignored
+        do {
+          full = path.dirname(full);
+          if (ignore[full]) {
+            return originalRequire(module, filename);
+          }
+        } while(full !== path.dirname(full));
+
+        var data = stripBOM(fs.readFileSync(filename, 'utf8').trim());
+        data = data.replace(/^\#\!.*/, '');
+
+        var instrumented = instrument(data);
+        var coverage = coverageData[filename] = new CoverageData(filename, instrumented);
+
+        var newCode = addInstrumentationHeader(template, filename, instrumented, pathToCoverageStore);
+
+        if (debugDirectory) {
+            var outputPath = path.join(debugDirectory, filename.replace(/[\/|\:|\\]/g, "_") + ".js");
+            fs.writeFileSync(outputPath, newCode);
+        }
+
+        return module._compile(newCode, filename);
+    };
+
+    // Setup the data retrieval and release functions
+    var coverage = function(ready) {
+      ready(coverageData);
+    };
+
+    coverage.release = function() {
+      require.extensions['.js'] = originalRequire;
+    };
+
+    return coverage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.cli" id="apidoc.element.cover.cli">
+        function <span class="apidocSignatureSpan">cover.</span>cli
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cli = function () {
+    return require('./bin/cover');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.combine" id="apidoc.element.cover.combine">
+        function <span class="apidocSignatureSpan">cover.</span>combine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">combine = function () {
+    var c = cli();
+    c.combine.apply(c, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.hook" id="apidoc.element.cover.hook">
+        function <span class="apidocSignatureSpan">cover.</span>hook
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hook = function () {
+    var c = cli();
+    c.hook.apply(c, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.hookAndCombine" id="apidoc.element.cover.hookAndCombine">
+        function <span class="apidocSignatureSpan">cover.</span>hookAndCombine
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hookAndCombine = function () {
+    var c = cli();
+    c.hookAndCombine.apply(c, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.hookAndCombineAndReport" id="apidoc.element.cover.hookAndCombineAndReport">
+        function <span class="apidocSignatureSpan">cover.</span>hookAndCombineAndReport
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hookAndCombineAndReport = function () {
+    var c = cli();
+    c.hookAndCombineAndReport.apply(c, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.hookAndReport" id="apidoc.element.cover.hookAndReport">
+        function <span class="apidocSignatureSpan">cover.</span>hookAndReport
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hookAndReport = function () {
+    var c = cli();
+    c.hookAndReport.apply(c, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.instrument" id="apidoc.element.cover.instrument">
+        function <span class="apidocSignatureSpan">cover.</span>instrument
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">instrument = function (src) {
+    var instrumentor = new Instrumentor(src);
+    return instrumentor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.nodes = {};
+
+// Setup the counters
+this.blockCounter = 0;
+this.nodeCounter = 0;
+
+if (src) {
+    this.instrumentedSource = this.<span class="apidocCodeKeywordSpan">instrument</span>(src);
+}
+};
+
+Instrumentor.prototype = new EventEmitter;
+
+Instrumentor.prototype.objectify = function() {
+var obj = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.load" id="apidoc.element.cover.load">
+        function <span class="apidocSignatureSpan">cover.</span>load
+        <span class="apidocSignatureSpan">(datas)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (datas) {
+    var combinedCoverage = {};
+
+    _.each(datas, function(data) {
+        _.each(data.files, function(fileData, filename) {
+            var instrumentor = {
+                source: fileData.instrumentor.source,
+                nodes: fileData.instrumentor.nodes,
+                nodeCounter: fileData.instrumentor.nodeCounter,
+                blockCounter: fileData.instrumentor.blockCounter,
+            };
+
+            var coverage = new CoverageData(filename, new instrument.Instrumentor());
+            coverage.instrumentor.source = fileData.instrumentor.source;
+            coverage.instrumentor.nodes = fileData.instrumentor.nodes;
+            coverage.instrumentor.nodeCounter = fileData.instrumentor.nodeCounter;
+            coverage.instrumentor.blockCounter = fileData.instrumentor.blockCounter;
+
+            coverage.source = coverage.instrumentor.source;
+            coverage.hash = fileData.hash;
+            coverage.nodes = fileData.nodes;
+            coverage.visitedBlocks = fileData.blocks;
+
+            if (combinedCoverage.hasOwnProperty(filename)) {
+                var coverageSoFar = combinedCoverage[filename];
+
+                if (coverageSoFar.hash !== coverage.hash) {
+                    throw new Error("Multiple versions of file '" + filename + "' in coverage data!");
+                }
+
+                // Merge nodes
+                _.each(coverage.nodes, function(nodeData, index) {
+                    var nodeDataSoFar = coverageSoFar.nodes[index] = (coverageSoFar.nodes[index] || {node: nodeData.node, count:
+0});
+                    nodeDataSoFar.count += nodeData.count;
+                });
+
+                // Merge blocks
+                _.each(coverage.visitedBlocks, function(blockData, index) {
+                    var blockDataSoFar = coverageSoFar.visitedBlocks[index] = (coverageSoFar.visitedBlocks[index] || {count: 0});
+                    blockDataSoFar.count += blockData.count;
+                });
+            }
+            else {
+                combinedCoverage[filename] = coverage;
+            }
+        });
+    });
+
+    return combinedCoverage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.cli" id="apidoc.module.cover.cli">module cover.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.cli.format" id="apidoc.element.cover.cli.format">
+        function <span class="apidocSignatureSpan">cover.cli.</span>format
+        <span class="apidocSignatureSpan">(coverageData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (coverageData) {
+    var stats = coverageData.stats();
+    var filename = path.relative(process.cwd(), coverageData.filename);
+
+    if (filename.length &gt; module.exports.MAX_FILENAME_LENGTH) {
+        filename = "â€¦" + filename.substr(filename.length - module.exports.MAX_FILENAME_LENGTH + 2);
+    }
+
+    var blockPercentage = Math.floor(stats.blocks.percentage * 100);
+    var linePercentage = Math.floor(stats.percentage * 100);
+
+    var blockColor = "____";
+    if (blockPercentage &gt;= 75) {
+        blockColor = "green";
+    }
+    else if (blockPercentage &gt;= 50) {
+        blockColor = "yellow";
+    }
+    else {
+        blockColor = "red";
+    }
+
+    var lineColor = "";
+    if (linePercentage &gt;= 75) {
+        lineColor = "green";
+    }
+    else if (linePercentage &gt;= 50) {
+        lineColor = "yellow";
+    }
+    else {
+        lineColor = "red";
+    }
+
+    return [
+        filename,
+        (Math.floor(stats.percentage * 100) + "%")[lineColor],
+        stats.missing,
+        stats.total,
+        (Math.floor(stats.blocks.percentage * 100) + "%")[blockColor],
+        stats.blocks.missing,
+        stats.blocks.total];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.colors" id="apidoc.module.cover.colors">module cover.colors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.addSequencer" id="apidoc.element.cover.colors.addSequencer">
+        function <span class="apidocSignatureSpan">cover.colors.</span>addSequencer
+        <span class="apidocSignatureSpan">(name, map)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSequencer = function (name, map) {
+  addProperty(name, sequencer(map));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports.themes = {};
+
+exports.addSequencer = function (name, map) {
+addProperty(name, sequencer(map));
+};
+
+exports.<span class="apidocCodeKeywordSpan">addSequencer</span>('rainbow', rainbowMap);
+exports.addSequencer('zebra', function (letter, i, exploded) {
+return i % 2 === 0 ? letter : letter.inverse;
+});
+
+exports.setTheme = function (theme) {
+if (typeof theme === 'string') {
+  try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.black" id="apidoc.element.cover.colors.black">
+        function <span class="apidocSignatureSpan">cover.colors.</span>black
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">black = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.blue" id="apidoc.element.cover.colors.blue">
+        function <span class="apidocSignatureSpan">cover.colors.</span>blue
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">blue = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.bold" id="apidoc.element.cover.colors.bold">
+        function <span class="apidocSignatureSpan">cover.colors.</span>bold
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bold = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.cyan" id="apidoc.element.cover.colors.cyan">
+        function <span class="apidocSignatureSpan">cover.colors.</span>cyan
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cyan = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.green" id="apidoc.element.cover.colors.green">
+        function <span class="apidocSignatureSpan">cover.colors.</span>green
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">green = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.grey" id="apidoc.element.cover.colors.grey">
+        function <span class="apidocSignatureSpan">cover.colors.</span>grey
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grey = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.inverse" id="apidoc.element.cover.colors.inverse">
+        function <span class="apidocSignatureSpan">cover.colors.</span>inverse
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inverse = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.italic" id="apidoc.element.cover.colors.italic">
+        function <span class="apidocSignatureSpan">cover.colors.</span>italic
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">italic = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.magenta" id="apidoc.element.cover.colors.magenta">
+        function <span class="apidocSignatureSpan">cover.colors.</span>magenta
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">magenta = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.rainbow" id="apidoc.element.cover.colors.rainbow">
+        function <span class="apidocSignatureSpan">cover.colors.</span>rainbow
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rainbow = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.red" id="apidoc.element.cover.colors.red">
+        function <span class="apidocSignatureSpan">cover.colors.</span>red
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">red = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.setTheme" id="apidoc.element.cover.colors.setTheme">
+        function <span class="apidocSignatureSpan">cover.colors.</span>setTheme
+        <span class="apidocSignatureSpan">(theme)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTheme = function (theme) {
+  if (typeof theme === 'string') {
+    try {
+      exports.themes[theme] = require(theme);
+      applyTheme(exports.themes[theme]);
+      return exports.themes[theme];
+    } catch (err) {
+      console.log(err);
+      return err;
+    }
+  } else {
+    applyTheme(theme);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.stripColors" id="apidoc.element.cover.colors.stripColors">
+        function <span class="apidocSignatureSpan">cover.colors.</span>stripColors
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripColors = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.underline" id="apidoc.element.cover.colors.underline">
+        function <span class="apidocSignatureSpan">cover.colors.</span>underline
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underline = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.white" id="apidoc.element.cover.colors.white">
+        function <span class="apidocSignatureSpan">cover.colors.</span>white
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">white = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.yellow" id="apidoc.element.cover.colors.yellow">
+        function <span class="apidocSignatureSpan">cover.colors.</span>yellow
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yellow = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.zalgo" id="apidoc.element.cover.colors.zalgo">
+        function <span class="apidocSignatureSpan">cover.colors.</span>zalgo
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zalgo = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.colors.zebra" id="apidoc.element.cover.colors.zebra">
+        function <span class="apidocSignatureSpan">cover.colors.</span>zebra
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zebra = function (str) {
+  return func.apply(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.commander" id="apidoc.module.cover.commander">module cover.commander</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.commander.Command" id="apidoc.element.cover.commander.Command">
+        function <span class="apidocSignatureSpan">cover.commander.</span>Command
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Command(name) {
+  this.commands = [];
+  this.options = [];
+  this.args = [];
+  this.name = name;
+  this.opts = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.commander.Option" id="apidoc.element.cover.commander.Option">
+        function <span class="apidocSignatureSpan">cover.commander.</span>Option
+        <span class="apidocSignatureSpan">(flags, description)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Option(flags, description) {
+  this.flags = flags;
+  this.required = ~flags.indexOf('&lt;');
+  this.optional = ~flags.indexOf('[');
+  this.bool = !~flags.indexOf('-no-');
+  flags = flags.split(/[ ,|]+/);
+  if (flags.length &gt; 1 &amp;&amp; !/^[[&lt;]/.test(flags[1])) this.short = flags.shift();
+  this.long = flags.shift();
+  this.description = description;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.console" id="apidoc.module.cover.console">module cover.console</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.console.patch" id="apidoc.element.cover.console.patch">
+        function <span class="apidocSignatureSpan">cover.console.</span>patch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function () {
+  console.log = patchedConsoleLog;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.console.unpatch" id="apidoc.element.cover.console.unpatch">
+        function <span class="apidocSignatureSpan">cover.console.</span>unpatch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unpatch = function () {
+  console.log = originalConsoleLog;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.escodegen" id="apidoc.module.cover.escodegen">module cover.escodegen</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.escodegen.generate" id="apidoc.element.cover.escodegen.generate">
+        function <span class="apidocSignatureSpan">cover.escodegen.</span>generate
+        <span class="apidocSignatureSpan">(node, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generate(node, options) {
+    if (typeof options !== 'undefined') {
+        base = options.base || '';
+        indent = options.indent || '    ';
+        parse = options.parse;
+    } else {
+        base = '';
+        indent = '    ';
+        parse = null;
+    }
+
+    switch (node.type) {
+    case Syntax.BlockStatement:
+    case Syntax.BreakStatement:
+    case Syntax.CatchClause:
+    case Syntax.ContinueStatement:
+    case Syntax.DoWhileStatement:
+    case Syntax.DebuggerStatement:
+    case Syntax.EmptyStatement:
+    case Syntax.ExpressionStatement:
+    case Syntax.ForStatement:
+    case Syntax.ForInStatement:
+    case Syntax.FunctionDeclaration:
+    case Syntax.IfStatement:
+    case Syntax.LabeledStatement:
+    case Syntax.Program:
+    case Syntax.ReturnStatement:
+    case Syntax.SwitchStatement:
+    case Syntax.SwitchCase:
+    case Syntax.ThrowStatement:
+    case Syntax.TryStatement:
+    case Syntax.VariableDeclaration:
+    case Syntax.VariableDeclarator:
+    case Syntax.WhileStatement:
+    case Syntax.WithStatement:
+        return generateStatement(node);
+
+    case Syntax.AssignmentExpression:
+    case Syntax.ArrayExpression:
+    case Syntax.BinaryExpression:
+    case Syntax.CallExpression:
+    case Syntax.ConditionalExpression:
+    case Syntax.FunctionExpression:
+    case Syntax.Identifier:
+    case Syntax.Literal:
+    case Syntax.LogicalExpression:
+    case Syntax.MemberExpression:
+    case Syntax.NewExpression:
+    case Syntax.ObjectExpression:
+    case Syntax.Property:
+    case Syntax.SequenceExpression:
+    case Syntax.ThisExpression:
+    case Syntax.UnaryExpression:
+    case Syntax.UpdateExpression:
+        return generateExpression(node);
+
+    default:
+        break;
+    }
+    throw new Error('Unknown node type: ' + node.type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            if (node.loc.end.line == 1) {
+                node.loc.end.column = node.loc.end.column - header.length;
+            }
+        }
+    }
+}
+
+return escodegen.<span class="apidocCodeKeywordSpan">generate</span>(tree);
+};
+
+Instrumentor.prototype.addToContext = function(context) {
+context = context || {};
+
+var that = this;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.esprima" id="apidoc.module.cover.esprima">module cover.esprima</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.esprima.parse" id="apidoc.element.cover.esprima.parse">
+        function <span class="apidocSignatureSpan">cover.esprima.</span>parse
+        <span class="apidocSignatureSpan">(code, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(code, options) {
+    var program, toString;
+
+    toString = String;
+    if (typeof code !== 'string' &amp;&amp; !(code instanceof String)) {
+        code = toString(code);
+    }
+
+    delegate = SyntaxTreeDelegate;
+    source = code;
+    index = 0;
+    lineNumber = (source.length &gt; 0) ? 1 : 0;
+    lineStart = 0;
+    length = source.length;
+    lookahead = null;
+    state = {
+        allowIn: true,
+        labelSet: {},
+        inFunctionBody: false,
+        inIteration: false,
+        inSwitch: false
+    };
+
+    extra = {};
+    if (typeof options !== 'undefined') {
+        extra.range = (typeof options.range === 'boolean') &amp;&amp; options.range;
+        extra.loc = (typeof options.loc === 'boolean') &amp;&amp; options.loc;
+
+        if (typeof options.tokens === 'boolean' &amp;&amp; options.tokens) {
+            extra.tokens = [];
+        }
+        if (typeof options.comment === 'boolean' &amp;&amp; options.comment) {
+            extra.comments = [];
+        }
+        if (typeof options.tolerant === 'boolean' &amp;&amp; options.tolerant) {
+            extra.errors = [];
+        }
+    }
+
+    if (length &gt; 0) {
+        if (typeof source[0] === 'undefined') {
+            // Try first to convert to a string. This is good as fast path
+            // for old IE which understands string indexing for string
+            // literals only and not for string object.
+            if (code instanceof String) {
+                source = code.valueOf();
+            }
+        }
+    }
+
+    patch();
+    try {
+        program = parseProgram();
+        if (typeof extra.comments !== 'undefined') {
+            filterCommentLocation();
+            program.comments = extra.comments;
+        }
+        if (typeof extra.tokens !== 'undefined') {
+            filterTokenLocation();
+            program.tokens = extra.tokens;
+        }
+        if (typeof extra.errors !== 'undefined') {
+            program.errors = extra.errors;
+        }
+        if (extra.range || extra.loc) {
+            program.body = filterGroup(program.body);
+        }
+    } catch (e) {
+        throw e;
+    } finally {
+        unpatch();
+        extra = {};
+    }
+
+    return program;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// We wrap the code with a function to make sure it is compliant with node
+var header = "(function() {";
+var footer = "\n})();"
+var wrappedCode = header + code + footer;
+
+// Parse the wrapped code
+var tree = esprima.<span class="apidocCodeKeywordSpan">parse</span>(wrappedCode, {range: true, loc: true, comment: true});
+
+var ignoredLines = {};
+var ignoreRe = /^\s*cover\s*:\s*false\s*$/
+tree.comments.
+    filter(function(commentNode) {
+        return ignoreRe.test(commentNode.value);
+    }).
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.html" id="apidoc.module.cover.html">module cover.html</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.html.format" id="apidoc.element.cover.html.format">
+        function <span class="apidocSignatureSpan">cover.html.</span>format
+        <span class="apidocSignatureSpan">(coverageData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (coverageData) {
+    var source = coverageData.source.split("\n");
+    var stats = coverageData.stats();
+    var finalOutput = [];
+    var fileOutput = [];
+
+    for(var i = 0 ; i &lt; source.length; i++) {
+        var sourceLine = source[i];
+        var line = i;
+        var lineOutput = [];
+        if (!stats.coverage.hasOwnProperty(line + 1)) {
+            lineOutput.push("&lt;span class='covered'&gt;  ");
+            lineOutput.push(htmlEscape(sourceLine));
+            lineOutput.push("&lt;/span&gt;");
+        }
+        else {
+            var lineInfo = stats.coverage[line + 1];
+            sourceLine = lineInfo.source;
+
+            if (!lineInfo.partial) {
+                // If it isn't partial, then we can just append the entire line
+                lineOutput.push("&lt;span class='uncovered'&gt;  ");
+                lineOutput.push(htmlEscape(sourceLine));
+                lineOutput.push("&lt;/span&gt;");
+            }
+            else {
+                lineOutput.push("&lt;span class='partial'&gt;  ");
+
+                for(var j = 0; j &lt; lineInfo.missing.length; j++) {
+                    curStart = j == 0 ? 0 : (lineInfo.missing[j-1].endCol + 1);
+                    curEnd = lineInfo.missing[j].startCol;
+
+                    lineOutput.push(htmlEscape(sourceLine.slice(curStart, curEnd)));
+
+                    lineOutput.push("&lt;span class='partialuncovered'&gt;");
+                    lineOutput.push(htmlEscape(sourceLine.slice(lineInfo.missing[j].startCol, lineInfo.missing[j].endCol + 1)));
+                    lineOutput.push("&lt;/span&gt;");
+                }
+
+                // Add the straggling part
+                curStart = lineInfo.missing[lineInfo.missing.length - 1].endCol + 1;
+                curEnd = sourceLine.length;
+                lineOutput.push(htmlEscape(sourceLine.slice(curStart, curEnd)));
+
+                lineOutput.push("&lt;/span&gt;");
+            }
+        }
+        fileOutput.push(lineOutput.join(""));
+    }
+
+    var lineOutput = [];
+    for(var i = 0; i &lt; source.length; i++) {
+        var lineNum = i + 1;
+        lineOutput.push("&lt;p&gt;" + lineNum + "&lt;/p&gt;");
+    }
+
+    finalOutput.push("&lt;td class='linenos' valign='top'&gt;");
+    finalOutput.push(lineOutput.join(""));
+    finalOutput.push("&lt;/td&gt;");
+    finalOutput.push("&lt;td class='text' valign='top'&gt;");
+    finalOutput.push("&lt;pre class='prettyprint lang-js'&gt;");
+    finalOutput.push(fileOutput.join("\n"));
+    finalOutput.push("&lt;/pre&gt;");
+    finalOutput.push("&lt;/td&gt;");
+
+    var outputString = finalOutput.join("");
+
+    return outputString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.instrument" id="apidoc.module.cover.instrument">module cover.instrument</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.instrument.instrument" id="apidoc.element.cover.instrument.instrument">
+        function <span class="apidocSignatureSpan">cover.</span>instrument
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">instrument = function (src) {
+    var instrumentor = new Instrumentor(src);
+    return instrumentor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.nodes = {};
+
+// Setup the counters
+this.blockCounter = 0;
+this.nodeCounter = 0;
+
+if (src) {
+    this.instrumentedSource = this.<span class="apidocCodeKeywordSpan">instrument</span>(src);
+}
+};
+
+Instrumentor.prototype = new EventEmitter;
+
+Instrumentor.prototype.objectify = function() {
+var obj = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cover.instrument.Instrumentor" id="apidoc.element.cover.instrument.Instrumentor">
+        function <span class="apidocSignatureSpan">cover.instrument.</span>Instrumentor
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Instrumentor(src) {
+    // Setup our names
+    this.names = {
+        statement: this.generateName(6, "__statement_"),
+        expression: this.generateName(6, "__expression_"),
+        block: this.generateName(6, "__block_")
+    };
+
+    // Setup the node store
+    this.nodes = {};
+
+    // Setup the counters
+    this.blockCounter = 0;
+    this.nodeCounter = 0;
+
+    if (src) {
+        this.instrumentedSource = this.instrument(src);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var instrumentor = {
+    source: fileData.instrumentor.source,
+    nodes: fileData.instrumentor.nodes,
+    nodeCounter: fileData.instrumentor.nodeCounter,
+    blockCounter: fileData.instrumentor.blockCounter,
+};
+
+var coverage = new CoverageData(filename, new instrument.<span class="apidocCodeKeywordSpan">Instrumentor</span>());
+coverage.instrumentor.source = fileData.instrumentor.source;
+coverage.instrumentor.nodes = fileData.instrumentor.nodes;
+coverage.instrumentor.nodeCounter = fileData.instrumentor.nodeCounter;
+coverage.instrumentor.blockCounter = fileData.instrumentor.blockCounter;
+
+coverage.source = coverage.instrumentor.source;
+coverage.hash = fileData.hash;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.json" id="apidoc.module.cover.json">module cover.json</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.json.format" id="apidoc.element.cover.json.format">
+        function <span class="apidocSignatureSpan">cover.json.</span>format
+        <span class="apidocSignatureSpan">(coverageData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (coverageData) {
+       var source = coverageData.source;
+       var stats = coverageData.stats();
+       var filename = coverageData.filename;
+       var result = { filename: filename, stats: stats, source: source };
+
+       return result;
+   }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cover.plain" id="apidoc.module.cover.plain">module cover.plain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cover.plain.format" id="apidoc.element.cover.plain.format">
+        function <span class="apidocSignatureSpan">cover.plain.</span>format
+        <span class="apidocSignatureSpan">(coverageData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (coverageData) {
+    var source = coverageData.source.split('\n');
+    var stats = coverageData.stats();
+    var filename = coverageData.filename;
+    var result = 'File: ' + filename + '\n\n';
+
+    for(var i = 0 ; i &lt; source.length; i++) {
+        var sourceLine = source[i];
+        var line = i;
+        var lineOutput = [];
+        if (!stats.coverage.hasOwnProperty(line + 1)) {
+            // ignore covered
+        }
+        else {
+            var lineInfo = stats.coverage[line + 1];
+            sourceLine = lineInfo.source;
+
+            if (!lineInfo.partial) {
+                // If it isn't partial, then we can just append the entire line
+                result += pad(i + 1, 5) + ' | ' + sourceLine + '\n';
+            }
+            else {
+                var partialLine = '';
+                for(var j = 0; j &lt; lineInfo.missing.length; j++) {
+                    curStart = j == 0 ? 0 : (lineInfo.missing[j-1].endCol + 1);
+                    curEnd = lineInfo.missing[j].startCol;
+                    partialLine += pad('', curEnd - curStart);
+                    partialLine += sourceLine.slice(lineInfo.missing[j].startCol, lineInfo.missing[j].endCol + 1);
+                }
+
+                result += pad(i + 1, 5) + ' | ' + partialLine + '\n';
+            }
+        }
+    }
+    return result + '\n';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
